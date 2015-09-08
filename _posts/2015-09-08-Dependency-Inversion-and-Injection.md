@@ -1,4 +1,7 @@
-##Dependency Inversion
+---
+layout: post
+title: Dependency Injection, and Why Dependency Inversion is A Misnomer.
+---
 Dependency Inversion is the 'D' in the five SOLID principles of object oriented software design. It is badly named because it doesn't so much 'invert' dependencies as (almost) do away with them altogether.
 
 Traditionally we might code a complex high level object (eg a keyboard) in terms of a simple low level one (eg a key). The high level one depends on the low level one.  If we change the low level object, it might prevent the high level object from functioning properly. Altering an object has knock on effects on anything on anything that depends on that object.
