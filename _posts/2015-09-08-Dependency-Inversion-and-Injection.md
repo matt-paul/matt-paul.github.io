@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dependency Injection, and Why Dependency Inversion is A Misnomer.
+title: Dependency Injection, and why Dependency Inversion is a misnomer.
 ---
 Dependency Inversion is the 'D' in the five SOLID principles of object oriented software design. It is badly named because it doesn't so much 'invert' dependencies as (almost) do away with them altogether.
 
