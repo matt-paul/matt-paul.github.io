@@ -1,4 +1,4 @@
-#Dependency Inversion
+##Dependency Inversion
 
 Dependency Inversion is the 'D' in the five SOLID principles of object oriented software design. It is badly named because it doesn't so much 'invert' dependencies as do away with them altogether.
 
@@ -8,4 +8,26 @@ With Dependency Inversion, we no longer have any concept of high or low level. B
 
 Using this technique we can alter objects as much as we like. Providing we preserve the interfaces, we should not get changes in one object affecting the functioning of others. This allows our system to have a naturally modular design. We can test each individual module in isolation rather than worrying about how they work in ensemble.
 
-#Dependency Injection
+##Dependency Injection
+
+Dependeny injection therefore works on the principle that you give an object its dependency in the form of a variable, resulting in less coupling to other objects and increased flexibility.
+
+Without Dependency Injection, we might do something like the following to create a board with a ship on it:
+
+class Board
+  def initialize
+    @ship = Ship.new
+  end
+end
+
+Note that the Board class depends on the Ship class. Every time we create a new board, the Board class calls the Ship class's 'new' method.
+
+With Dependency Injection, we would inject the ship into the board when we create the latter:
+
+class Board
+  def initialize(ship)
+    @ship = ship
+  end
+end
+
+The Board class no longer depends on the Ship Class. We create the ship independently and then pass it to the board.
