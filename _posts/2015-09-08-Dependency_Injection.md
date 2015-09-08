@@ -14,20 +14,21 @@ Dependeny injection therefore works on the principle that you give an object its
 
 Without Dependency Injection, we might do something like the following to create a board with a ship on it:
 
-class Board
-  def initialize
+`class Board
+def initialize
     @ship = Ship.new
   end
-end
+end`
+
 
 Note that the Board class depends on the Ship class. Every time we create a new board, the Board class calls the Ship class's 'new' method.
 
 With Dependency Injection, we would inject the ship into the board when we create the latter:
 
-class Board
+`class Board
   def initialize(ship)
     @ship = ship
   end
-end
+end`
 
 The Board class no longer depends on the Ship Class. We create the ship independently and then pass it to the board.
